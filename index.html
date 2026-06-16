@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>savilanf | Personal Portfolio</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="Portofolio modern dan profesional savilanf dengan estetika premium glassmorphism. Frontend Developer & UI/UX Designer.">
+  <meta name="keywords" content="Portfolio, Glassmorphism, Web Developer, Frontend, UI/UX Designer, savilanf, HTML, CSS, JavaScript">
+  <meta name="author" content="savilanf">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Floating Background Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header>
+    <nav class="navbar" id="main-nav">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <img src="assets/logo.jpg" alt="Logo savilanf" class="nav-logo-img">
+        savilanf
+      </a>
+      <ul class="nav-links" id="nav-menu">
+        <li class="nav-item active"><a href="#hero" id="link-hero">Home</a></li>
+        <li class="nav-item"><a href="#about" id="link-about">About</a></li>
+        <li class="nav-item"><a href="#projects" id="link-projects">Projects</a></li>
+        <li class="nav-item"><a href="#certificates" id="link-certificates">Certificates</a></li>
+        <li class="nav-item"><a href="#experience" id="link-experience">Experience</a></li>
+        <li class="nav-item"><a href="#education" id="link-education">Education</a></li>
+        <li class="nav-item"><a href="#contact" id="link-contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-btn" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Open Mobile Menu">
+          <i data-lucide="menu" id="hamburger-icon"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <div class="hero-content reveal-element">
+        <div class="hero-tag">Welcome to my space</div>
+        <h1 class="hero-title">Hai, Saya <span class="accent">Dilla</span></h1>
+        <div class="hero-subtitle">Saya seorang <span class="typing-text" id="typing-target"></span></div>
+        <p class="hero-desc">
+          Berfokus pada pengembangan antarmuka web modern yang estetik, responsif, dan interaktif dengan pengalaman pengguna yang premium. Mari ubah ide kreatif Anda menjadi kode berkualitas!
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="glass-btn primary" id="hero-cta-contact">
+            Hubungi Saya <i data-lucide="mail"></i>
+          </a>
+          <a href="#projects" class="glass-btn" id="hero-cta-projects">
+            Lihat Project <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal-element">
+        <div class="glass-card hero-glass-avatar">
+          <div class="avatar-wrapper">
+            <img src="assets/avatar.jpg" alt="Foto Profil Dilla" id="profile-avatar">
+          </div>
+          <div class="avatar-info">
+            <div class="avatar-name">Savila Nur Fadilla</div>
+            <div class="avatar-title">Frontend & UI/UX Enthusiast</div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & SKILLS SECTION -->
+    <section id="about">
+      <div class="section-header reveal-element">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="section-subtitle"></p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="glass-card about-info-card reveal-element">
+          <div class="about-text">
+            <h3>Siapa Saya?</h3>
+            <p>
+              Saya adalah seorang Kreator Digital & UI/UX Designer yang bersemangat dalam merancang antarmuka visual yang modern, estetik, dan interaktif. Dengan pendekatan inovatif menggunakan AI-Assisted Web Building (Vibe Coding), saya mampu menerjemahkan ide kreatif menjadi prototipe web fungsional secara instan dan presisi.
+            </p>
+            <p>
+              Saya mengombinasikan keahlian desain di Figma, integrasi alat produktivitas kerja (Microsoft & Google Suite), serta penyusunan kode berbasis kecerdasan buatan untuk menghasilkan solusi digital berkualitas dengan waktu pengembangan yang sangat efisien.
+            </p>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Project Selesai</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Tahun Berkarya</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Sertifikat Resmi</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-wrapper reveal-element">
+          <!-- Hard Skills -->
+          <div class="skills-category">
+            <h3 class="skills-header" style="font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="cpu" class="accent-color" style="width: 18px;"></i> Hard Skills
+            </h3>
+            <div class="skills-grid">
+              <div class="glass-card skill-tag-card" data-skill-level="90">
+                <div class="skill-icon-box"><i data-lucide="brain-circuit"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">AI Vibe Coding</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="95">
+                <div class="skill-icon-box"><i data-lucide="bot"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">Antigravity AI (Pair)</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="85">
+                <div class="skill-icon-box"><i data-lucide="figma"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">Figma UI/UX</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="80">
+                <div class="skill-icon-box"><i data-lucide="terminal"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">VS Code Editor</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="85">
+                <div class="skill-icon-box"><i data-lucide="file-text"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">Office & Google Suite</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="65">
+                <div class="skill-icon-box"><i data-lucide="code-2"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">HTML & CSS Custom</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skills-category" style="margin-top: 30px;">
+            <h3 class="skills-header" style="font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="smile" class="accent-color" style="width: 18px;"></i> Soft Skills
+            </h3>
+            <div class="skills-grid">
+              <div class="glass-card skill-tag-card" data-skill-level="95">
+                <div class="skill-icon-box"><i data-lucide="lightbulb"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">Creative Thinking</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="90">
+                <div class="skill-icon-box"><i data-lucide="zap"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">AI Adaptability</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="85">
+                <div class="skill-icon-box"><i data-lucide="help-circle"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">Problem Solving</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-card skill-tag-card" data-skill-level="80">
+                <div class="skill-icon-box"><i data-lucide="message-square"></i></div>
+                <div class="skill-info">
+                  <span class="skill-name">Communication</span>
+                  <div class="skill-progress-bg">
+                    <div class="skill-progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <div class="section-header reveal-element">
+        <h2 class="section-title">Project Unggulan</h2>
+        <p class="section-subtitle"></p>
+      </div>
+
+      <div class="filter-tabs reveal-element">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="mobile">Mobile App</button>
+        <button class="filter-btn" data-filter="design">UI Design</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="glass-card project-card reveal-element" data-category="web">
+          <div class="project-img-box">
+            <span class="project-badge">Web App</span>
+            <img src="assets/project1.png" alt="Glassy Dashboard Project">
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Glassy Dashboard</h3>
+            <p class="project-desc">Panel admin interaktif dengan visualisasi data lengkap, menggunakan bagan dinamis dan efek glassmorphism yang premium.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS Grid</span>
+              <span class="project-tag">Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://glassy-nu.vercel.app/" class="project-link" target="_blank"><i data-lucide="external-link"></i> Live Demo</a>
+              <a href="https://github.com/savilanf/glassy" class="project-link" target="_blank"><i data-lucide="github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card reveal-element" data-category="mobile">
+          <div class="project-img-box">
+            <span class="project-badge">Mobile App</span>
+            <img src="assets/project2.png" alt="Zenith Meditation App Project">
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Zenith Meditation</h3>
+            <p class="project-desc">Desain dan prototype aplikasi meditasi minimalis dengan efek blur frosted glass pada pemutar musik dan kontrol visualnya.</p>
+            <div class="project-tags">
+              <span class="project-tag">React Native</span>
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">Lottie Animations</span>
+            </div>
+            <div class="project-links">
+              <a href="https://zenith-omega-murex.vercel.app/" class="project-link" target="_blank"><i data-lucide="external-link"></i> Prototype</a>
+              <a href="https://www.figma.com/design/0FeLctX0mLuChXuTFQcOi7/zenith?node-id=0-1&t=IuHOb7cud17mUxpz-1" class="project-link" target="_blank"><i data-lucide="figma"></i> Figma</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card project-card reveal-element" data-category="design">
+          <div class="project-img-box">
+            <span class="project-badge">UI Design</span>
+            <img src="assets/project3.jpg" alt="Aura E-Commerce Project" style="filter: brightness(0.65);">
+            <div class="project-overlay-badge">
+              <span>ON PROGRESS</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">E-Commerce</h3>
+            <p class="project-desc">Eksplorasi UI/UX toko online produk estetika dengan nuansa lavender-ungu mewah, dilengkapi micro-interactions yang mulus.</p>
+            <div class="project-tags">
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">UI/UX</span>
+              <span class="project-tag">Glassmorphism</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.figma.com/design/OEj3otYZnAJDTkZkaXfbJH/e-commerce?t=IuHOb7cud17mUxpz-1" class="project-link" target="_blank"><i data-lucide="external-link"></i> Behance Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES & LICENSES SECTION -->
+    <section id="certificates">
+      <div class="section-header reveal-element">
+        <h2 class="section-title">Sertifikat & Lisensi</h2>
+        <p class="section-subtitle"></p>
+      </div>
+
+      <div class="certificates-grid">
+        <!-- Cert 1 -->
+        <a href="https://coursera.org/share/your-google-ux-credential" target="_blank" class="glass-card cert-card reveal-element">
+          <div class="cert-logo-box">
+            <img src="assets/google_logo.svg" alt="Google Logo">
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name">Web Design Competition</h3>
+            <span class="cert-issuer">Techsoft</span>
+            <span class="cert-date">Diterbitkan Jun 2026</span>
+            <span class="cert-btn"><i data-lucide="external-link"></i> Lihat Sertifikat</span>
+          </div>
+        </a>
+
+        <!-- Cert 2 -->
+        <a href="https://coursera.org/verify/specialization/C6XDUG44TG4H" target="_blank" class="glass-card cert-card reveal-element">
+          <div class="cert-logo-box">
+            <img src="assets/google_logo.svg" alt="Google Logo">
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name">Google Data Analysis with Python</h3>
+            <span class="cert-issuer">Google Career Certificates</span>
+            <span class="cert-date">Diterbitkan Jun 2026</span>
+            <span class="cert-btn"><i data-lucide="external-link"></i> Lihat Sertifikat</span>
+          </div>
+        </a>
+
+        <!-- Cert 3 -->
+        <a href="https://coursera.org/verify/professional-cert/R0AG5K59EW9K" target="_blank" class="glass-card cert-card reveal-element">
+          <div class="cert-logo-box">
+            <img src="assets/google_logo.svg" alt="Google Logo">
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name">Google AI Professional Certificate</h3>
+            <span class="cert-issuer">Google Career Certificates</span>
+            <span class="cert-date">Diterbitkan Jun 2026</span>
+            <span class="cert-btn"><i data-lucide="external-link"></i> Lihat Sertifikat</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <div class="section-header reveal-element">
+        <h2 class="section-title">Pengalaman</h2>
+        <p class="section-subtitle"></p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Experience 1 -->
+        <div class="timeline-item timeline-left reveal-element">
+          <div class="glass-card timeline-item-card">
+            <span class="timeline-date">Feb 2026 - Sekarang</span>
+            <h3>BEM KEMA Telkom University Purwokerto</h3>
+            <h4>Organisasi - Kementerian Riset dan Data</h4>
+            <p>Melakukan Riset dan Analisis Data untuk Kebutuhan Organisasi</p>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item timeline-right reveal-element">
+          <div class="glass-card timeline-item-card">
+            <span class="timeline-date">September 2025</span>
+            <h3>Telkom Orientation Days</h3>
+            <h4>Kepanitiaan - Mentor and Facilitator</h4>
+            <p>Membimbing Mahasiswa Baru Telkom University Purwokerto</p>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item timeline-left reveal-element">
+          <div class="glass-card timeline-item-card">
+            <span class="timeline-date">Mei - Desember 2025</span>
+            <h3>Eksekutif Muda BEM KEMA Telkom University Purwokerto</h3>
+            <h4>Intership - Kementerian Riset dan Data</h4>
+            <p>Membantu Riset dan Analisis Data untuk Kebutuhan Organisasi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+      <div class="section-header reveal-element">
+        <h2 class="section-title">Riwayat Edukasi</h2>
+        <p class="section-subtitle"></p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Education 1 -->
+        <div class="timeline-item timeline-left reveal-element">
+          <div class="glass-card timeline-item-card">
+            <span class="timeline-date">2024 - Sekarang</span>
+            <h3>S1 Teknik Informatika</h3>
+            <h4>Telkom University</h4>
+            <p>Fokus mendalami algoritma dan struktur data, basis data, jaringan komputer, rekayasa perangkat lunak, dan pengembangan aplikasi web.</p>
+          </div>
+        </div>
+
+        <!-- Education 2 -->
+        <div class="timeline-item timeline-right reveal-element">
+          <div class="glass-card timeline-item-card">
+            <span class="timeline-date">2021 - 2024</span>
+            <h3>SMA Al Irsyad Al Islamiyyah Purwokerto</h3>
+            <h4></h4>
+            <p>Sekolah Menengah Atas Al Irsyad Al Islamiyyah Purwokerto, Jurusan MIPA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="section-header reveal-element">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <p class="section-subtitle">Apakah Anda punya proyek menarik atau ingin berdiskusi? Hubungi saya!</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="glass-card contact-info-card reveal-element">
+          <div>
+            <h3>Detail Info</h3>
+            <p>Hubungi saya melalui saluran informasi di bawah ini, atau langsung kirim pesan melalui formulir kontak.</p>
+            
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+                <div class="contact-detail-text">
+                  <span class="label">Email</span>
+                  <span class="value">dillaaa1109@gmail.com</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-icon-box"><i data-lucide="phone"></i></div>
+                <div class="contact-detail-text">
+                  <span class="label">WhatsApp / Telepon</span>
+                  <span class="value">+62 898-5476-177</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-icon-box"><i data-lucide="map-pin"></i></div>
+                <div class="contact-detail-text">
+                  <span class="label">Lokasi</span>
+                  <span class="value">Purwokerto, Jawa Tengah, Indonesia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/savila-nur-fadilla" class="social-btn" target="_blank" aria-label="LinkedIn Profile">
+              <img src="assets/Linkedin.jpg" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com/savilanf" class="social-btn" target="_blank" aria-label="GitHub Profile">
+              <img src="assets/Github.jpg" alt="GitHub Logo">
+            </a>
+            <a href="https://www.instagram.com/savilanf" class="social-btn" target="_blank" aria-label="Instagram Profile">
+              <img src="assets/Instagram.jpg" alt="Instagram Logo">
+            </a>
+            <a href="https://www.tiktok.com/@kikowkik?_r=1&_t=ZS-975tRtBzg0t" class="social-btn" target="_blank" aria-label="Tiktok Profile">
+              <img src="assets/TikTok.jpg" alt="TikTok Logo">
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-card contact-form-card reveal-element">
+          <form class="contact-form" id="contact-form-el">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="input-name">Nama Anda</label>
+                <input type="text" id="input-name" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="input-email">Alamat Email</label>
+                <input type="email" id="input-email" class="form-control" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="input-subject">Subjek</label>
+              <input type="text" id="input-subject" class="form-control" placeholder="Pekerjaan / Kolaborasi / Menyapa" required>
+            </div>
+            <div class="form-group">
+              <label for="input-message">Pesan Anda</label>
+              <textarea id="input-message" class="form-control" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+            </div>
+            <button type="submit" class="glass-btn primary" id="btn-submit-form" style="width: 100%;">
+              Kirim Pesan <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="#hero" class="footer-logo" style="display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 800; text-decoration: none; color: inherit;">
+        <img src="assets/logo.jpg" alt="Logo savilanf" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 1px solid var(--glass-border);">
+        savilanf
+      </a>
+      <span class="footer-copyright">&copy; 2026 savilanf. All Rights Reserved. Built with Glassmorphism.</span>
+    </div>
+  </footer>
+
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
