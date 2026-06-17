@@ -277,4 +277,179 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1500);
     });
   }
+
+  // 9. ZEN MUSIC PLAYER (APPLE MUSIC / iOS STYLE)
+  const musicContainer = document.querySelector('.ios-player');
+  if (musicContainer) {
+    const playBtn = document.getElementById('play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const playerTitle = document.getElementById('player-title');
+    const playerArtist = document.getElementById('player-artist');
+    const playerCover = document.getElementById('player-cover');
+    const progressBar = document.getElementById('progress-bar');
+    const progressContainer = document.getElementById('progress-container');
+    const currentTimeEl = document.getElementById('current-time');
+    const totalDurationEl = document.getElementById('total-duration');
+    const volumeSlider = document.getElementById('volume-slider');
+    const playlistItems = document.querySelectorAll('.ios-playlist-item');
+    
+    let isPlaying = false;
+    let trackIndex = 0;
+    let currentTime = 0;
+    let progressInterval = null;
+    
+    const tracks = [
+      {
+        name: 'All Too Well',
+        artist: 'Taylor Swift',
+        duration: 329, // 5:29
+        cover: 'assets/taylor_swift.jpg'
+      },
+      {
+        name: 'Night Changes',
+        artist: 'One Direction',
+        duration: 222, // 3:42
+        cover: 'assets/one_direction.jpg'
+      },
+      {
+        name: 'Beauty and a Beat',
+        artist: 'Justin Bieber',
+        duration: 228, // 3:48
+        cover: 'assets/justin_bieber.jpg'
+      },
+      {
+        name: 'Shape of My Heart',
+        artist: 'Backstreet Boys',
+        duration: 230, // 3:50
+        cover: 'assets/backstreet_boys.jpg'
+      }
+    ];
+
+    // Format duration helper
+    function formatTime(secs) {
+      const minutes = Math.floor(secs / 60);
+      const seconds = Math.floor(secs % 60);
+      return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    // Load track
+    function loadTrack(index) {
+      trackIndex = index;
+      const track = tracks[trackIndex];
+      playerTitle.textContent = track.name;
+      playerArtist.textContent = track.artist;
+      playerCover.src = track.cover;
+      
+      // Update active playlist item
+      playlistItems.forEach((item, idx) => {
+        if (idx === trackIndex) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+      
+      // Reset progress
+      currentTime = 0;
+      progressBar.style.width = '0%';
+      currentTimeEl.textContent = '0:00';
+      totalDurationEl.textContent = formatTime(track.duration);
+    }
+
+    // Initialize first track
+    loadTrack(0);
+
+    // Play/Pause Track
+    function playPauseTrack() {
+      if (!isPlaying) {
+        playTrack();
+      } else {
+        pauseTrack();
+      }
+    }
+
+    // Simulate play (timer simulation)
+    function playTrack() {
+      isPlaying = true;
+      musicContainer.classList.add('music-playing');
+      playIcon.setAttribute('data-lucide', 'pause');
+      lucide.createIcons();
+
+      // Clear previous interval if any
+      if (progressInterval) clearInterval(progressInterval);
+
+      // Start mock ticker
+      progressInterval = setInterval(() => {
+        currentTime++;
+        const currentTrack = tracks[trackIndex];
+        if (currentTime >= currentTrack.duration) {
+          nextTrack();
+        } else {
+          const progressPercent = (currentTime / currentTrack.duration) * 100;
+          progressBar.style.width = `${progressPercent}%`;
+          currentTimeEl.textContent = formatTime(currentTime);
+        }
+      }, 1000);
+    }
+
+    function pauseTrack() {
+      isPlaying = false;
+      musicContainer.classList.remove('music-playing');
+      playIcon.setAttribute('data-lucide', 'play');
+      lucide.createIcons();
+
+      if (progressInterval) {
+        clearInterval(progressInterval);
+        progressInterval = null;
+      }
+    }
+
+    // Previous Track
+    function prevTrack() {
+      let nextIndex = trackIndex - 1;
+      if (nextIndex < 0) {
+        nextIndex = tracks.length - 1;
+      }
+      loadTrack(nextIndex);
+      if (isPlaying) playTrack();
+    }
+
+    // Next Track
+    function nextTrack() {
+      let nextIndex = trackIndex + 1;
+      if (nextIndex >= tracks.length) {
+        nextIndex = 0;
+      }
+      loadTrack(nextIndex);
+      if (isPlaying) playTrack();
+    }
+
+    // Seek Track simulation
+    function setProgress(e) {
+      const width = this.clientWidth;
+      const clickX = e.offsetX;
+      const currentTrack = tracks[trackIndex];
+      currentTime = Math.floor((clickX / width) * currentTrack.duration);
+      
+      const progressPercent = (currentTime / currentTrack.duration) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+      currentTimeEl.textContent = formatTime(currentTime);
+    }
+
+    // Event listeners
+    playBtn.addEventListener('click', playPauseTrack);
+    prevBtn.addEventListener('click', prevTrack);
+    nextBtn.addEventListener('click', nextTrack);
+    progressContainer.addEventListener('click', setProgress);
+
+    // Playlist item click
+    playlistItems.forEach((item, idx) => {
+      item.addEventListener('click', () => {
+        loadTrack(idx);
+        playTrack();
+      });
+    });
+  }
 });
