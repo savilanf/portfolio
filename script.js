@@ -255,26 +255,68 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = document.getElementById('btn-submit-form');
       const originalText = submitBtn.innerHTML;
       
+      const nameInput = document.getElementById('input-name');
+      const emailInput = document.getElementById('input-email');
+      const subjectInput = document.getElementById('input-subject');
+      const messageInput = document.getElementById('input-message');
+      
       // Show sending state
       submitBtn.disabled = true;
       submitBtn.innerHTML = `Mengirim... <i data-lucide="loader" class="animate-spin"></i>`;
       lucide.createIcons();
 
-      // Simulate network request (1.5 seconds)
-      setTimeout(() => {
-        const success = Math.random() > 0.05; // 95% success rate
-        
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-        lucide.createIcons();
+      // Web3Forms API Integration
+      // NOTE: Silakan ganti "YOUR_ACCESS_KEY_HERE" dengan Access Key asli dari https://web3forms.com
+      const accessKey = "YOUR_ACCESS_KEY_HERE"; 
+      
+      const formData = {
+        access_key: accessKey,
+        name: nameInput.value,
+        email: emailInput.value,
+        subject: subjectInput.value,
+        message: messageInput.value,
+        from_name: "Savilanf Portfolio Contact Form"
+      };
 
-        if (success) {
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status === 200) {
           showToast('Pesan berhasil terkirim! Terima kasih telah menghubungi saya.', 'success');
           contactForm.reset();
         } else {
-          showToast('Oops! Gagal mengirim pesan. Silakan coba beberapa saat lagi.', 'error');
+          console.error(json);
+          // If the key is not set or invalid, show a helpful message
+          if (accessKey === "YOUR_ACCESS_KEY_HERE") {
+            showToast('Formulir terkirim (Simulasi)! Silakan pasang Access Key Web3Forms Anda di script.js.', 'success');
+            contactForm.reset();
+          } else {
+            showToast(json.message || 'Gagal mengirim pesan. Silakan coba lagi.', 'error');
+          }
         }
-      }, 1500);
+      })
+      .catch((error) => {
+        console.error(error);
+        // Fallback for simulation if network fails or key is missing
+        if (accessKey === "YOUR_ACCESS_KEY_HERE") {
+          showToast('Formulir terkirim (Simulasi)! Silakan pasang Access Key Web3Forms Anda di script.js.', 'success');
+          contactForm.reset();
+        } else {
+          showToast('Terjadi kesalahan koneksi. Silakan coba beberapa saat lagi.', 'error');
+        }
+      })
+      .then(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        lucide.createIcons();
+      });
     });
   }
 
