@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Web3Forms API Integration
       // NOTE: Silakan ganti "YOUR_ACCESS_KEY_HERE" dengan Access Key asli dari https://web3forms.com
-      const accessKey = "YOUR_ACCESS_KEY_HERE"; 
+      const accessKey = "ffde2bd6-b363-4506-a980-c7e150f4fd38"; 
       
       const formData = {
         access_key: accessKey,
