@@ -321,23 +321,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 8b. CLICKABLE CONTACT ITEMS FALLBACK & CLIPBOARD COPY
-  const emailItem = document.querySelector('a.contact-item-link[href^="mailto:"]');
+  const emailItem = document.querySelector('a.contact-item-link[href*="mail.google.com"]');
   if (emailItem) {
-    emailItem.addEventListener('click', (e) => {
-      e.preventDefault(); // Prevent double trigger
+    emailItem.addEventListener('click', () => {
       const email = "dillaaa1109@gmail.com";
       
       // Copy to clipboard
       navigator.clipboard.writeText(email)
         .then(() => {
-          showToast('Email dillaaa1109@gmail.com berhasil disalin ke clipboard!', 'success');
+          showToast('Email dillaaa1109@gmail.com berhasil disalin!', 'success');
         })
         .catch(err => {
           console.error('Gagal menyalin email:', err);
         });
-      
-      // Attempt redirect to email client
-      window.location.href = "mailto:" + email;
     });
   }
 
