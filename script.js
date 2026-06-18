@@ -320,6 +320,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 8b. CLICKABLE CONTACT ITEMS FALLBACK & CLIPBOARD COPY
+  const emailItem = document.querySelector('a.contact-item-link[href^="mailto:"]');
+  if (emailItem) {
+    emailItem.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent double trigger
+      const email = "dillaaa1109@gmail.com";
+      
+      // Copy to clipboard
+      navigator.clipboard.writeText(email)
+        .then(() => {
+          showToast('Email dillaaa1109@gmail.com berhasil disalin ke clipboard!', 'success');
+        })
+        .catch(err => {
+          console.error('Gagal menyalin email:', err);
+        });
+      
+      // Attempt redirect to email client
+      window.location.href = "mailto:" + email;
+    });
+  }
+
   // 9. ZEN MUSIC PLAYER (APPLE MUSIC / iOS STYLE)
   const musicContainer = document.querySelector('.ios-player');
   if (musicContainer) {
