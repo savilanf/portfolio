@@ -794,6 +794,18 @@ section {
   transform: scale(1.15) rotate(4deg);
 }
 
+.skill-icon-box.no-bg {
+  background: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.skill-tag-card:hover .skill-icon-box.no-bg {
+  background: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
 /* Overlapping Logos style (HTML5+CSS3, Google+Microsoft) */
 .overlapping-logos {
   position: relative;
