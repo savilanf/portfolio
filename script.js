@@ -136,18 +136,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // 5. PROJECT CATEGORY FILTERING (WITH ANIMATIONS)
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectFilterBtns = document.querySelectorAll('#projects .filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
-  filterBtns.forEach(btn => {
+  projectFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Remove active from other buttons and add to clicked
-      filterBtns.forEach(b => b.classList.remove('active'));
+      // Remove active from other project buttons and add to clicked
+      projectFilterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const filterValue = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
+        // First transition cards out (shrink and fade)
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.8) translateY(20px)';
+        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+        setTimeout(() => {
+          const isMatch = filterValue === 'all' || card.getAttribute('data-category') === filterValue;
+          
+          if (isMatch) {
+            card.style.display = 'flex';
+            // Trigger browser reflow to enable transition in
+            card.offsetHeight;
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1) translateY(0)';
+          } else {
+            card.style.display = 'none';
+          }
+        }, 300);
+      });
+    });
+  });
+
+  // 6. CERTIFICATE CATEGORY FILTERING (WITH ANIMATIONS)
+  const certFilterBtns = document.querySelectorAll('#certificates .filter-btn');
+  const certCards = document.querySelectorAll('.cert-card');
+
+  certFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active from other certificate buttons and add to clicked
+      certFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      certCards.forEach(card => {
         // First transition cards out (shrink and fade)
         card.style.opacity = '0';
         card.style.transform = 'scale(0.8) translateY(20px)';

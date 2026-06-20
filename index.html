@@ -414,56 +414,64 @@
         <p class="section-subtitle"></p>
       </div>
 
-      <div class="timeline-container">
-        <!-- Experience 1 -->
-        <div class="timeline-item timeline-left reveal-element">
-          <div class="glass-card timeline-item-card">
-            <span class="timeline-date">Feb 2026 - Sekarang</span>
-            <h3>BEM KEMA Telkom University Purwokerto</h3>
-            <h4>Organisasi - Kementerian Riset dan Data</h4>
-            <p>Melakukan Riset dan Analisis Data untuk Kebutuhan Organisasi</p>
+      <div class="experience-segments reveal-element">
+        
+        <!-- Segment 1: Organisasi -->
+        <div class="exp-segment">
+          <h3 class="segment-title-text"><i data-lucide="users" class="accent-color"></i> Organisasi</h3>
+          <div class="segment-timeline">
+            <!-- Card 1 -->
+            <div class="glass-card timeline-item-card">
+              <span class="timeline-date">Feb 2026 - Sekarang</span>
+              <h3>BEM KEMA Telkom University Purwokerto</h3>
+              <h4>Kementerian Riset dan Data</h4>
+              <p>Melakukan Riset dan Analisis Data untuk Kebutuhan Organisasi</p>
+            </div>
           </div>
         </div>
 
-        <!-- Experience 2 -->
-        <div class="timeline-item timeline-right reveal-element">
-          <div class="glass-card timeline-item-card">
-            <span class="timeline-date">Mei - Desember 2025</span>
-            <h3>Eksekutif Muda BEM KEMA Telkom University Purwokerto</h3>
-            <h4>Intership - Kementerian Riset dan Data</h4>
-            <p>Membantu Riset dan Analisis Data untuk Kebutuhan Organisasi</p>
+        <!-- Segment 2: Internship -->
+        <div class="exp-segment">
+          <h3 class="segment-title-text"><i data-lucide="briefcase" class="accent-color"></i> Internship</h3>
+          <div class="segment-timeline">
+            <!-- Card 1 -->
+            <div class="glass-card timeline-item-card">
+              <span class="timeline-date">Mei - Desember 2025</span>
+              <h3>Eksekutif Muda BEM KEMA Telkom University Purwokerto</h3>
+              <h4>Kementerian Riset dan Data</h4>
+              <p>Membantu Riset dan Analisis Data untuk Kebutuhan Organisasi</p>
+            </div>
           </div>
         </div>
 
-        <!-- Experience 3 -->
-        <div class="timeline-item timeline-left reveal-element">
-          <div class="glass-card timeline-item-card">
-            <span class="timeline-date">November 2025</span>
-            <h3>Seminar dan Workshop Digipreneur</h3>
-            <h4>Kepanitiaan - Program and Event</h4>
-            <p>Bertanggung jawab dalam perancangan dan pelaksanaan seminar dan workshop Digipreneur</p>
+        <!-- Segment 3: Kepanitiaan & Event -->
+        <div class="exp-segment">
+          <h3 class="segment-title-text"><i data-lucide="clipboard-list" class="accent-color"></i> Kepanitiaan & Event</h3>
+          <div class="segment-timeline">
+            <!-- Card 1 -->
+            <div class="glass-card timeline-item-card">
+              <span class="timeline-date">November 2025</span>
+              <h3>Seminar dan Workshop Digipreneur</h3>
+              <h4>Program & Event</h4>
+              <p>Bertanggung jawab dalam perancangan dan pelaksanaan seminar dan workshop Digipreneur</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="glass-card timeline-item-card">
+              <span class="timeline-date">November 2025</span>
+              <h3>Tel-U Leadermind Competition</h3>
+              <h4>Divisi Soal</h4>
+              <p>Bertanggung jawab dalam perancangan dan pembuatan soal untuk kompetisi</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="glass-card timeline-item-card">
+              <span class="timeline-date">September 2025</span>
+              <h3>Telkom Orientation Days</h3>
+              <h4>Mentor & Facilitator</h4>
+              <p>Membimbing Mahasiswa Baru Telkom University Purwokerto</p>
+            </div>
           </div>
         </div>
 
-        <!-- Experience 4 -->
-        <div class="timeline-item timeline-right reveal-element">
-          <div class="glass-card timeline-item-card">
-            <span class="timeline-date">November 2025</span>
-            <h3>Tel-U Leadermind Competition</h3>
-            <h4>Kepanitiaan - Divisi Soal</h4>
-            <p>Bertanggung jawab dalam perancangan dan pembuatan soal untuk kompetisi</p>
-          </div>
-        </div>
-
-        <!-- Experience 5 -->
-        <div class="timeline-item timeline-left reveal-element">
-          <div class="glass-card timeline-item-card">
-            <span class="timeline-date">September 2025</span>
-            <h3>Telkom Orientation Days</h3>
-            <h4>Kepanitiaan - Mentor and Facilitator</h4>
-            <p>Membimbing Mahasiswa Baru Telkom University Purwokerto</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -665,10 +673,17 @@
         <p class="section-subtitle"></p>
       </div>
 
+      <div class="filter-tabs reveal-element">
+        <button class="filter-btn active" data-filter="ai">Artificial Intelligence (AI)</button>
+        <button class="filter-btn" data-filter="programming">Programming & Data</button>
+        <button class="filter-btn" data-filter="business">Bisnis & Karir</button>
+        <button class="filter-btn" data-filter="competition">Kompetisi</button>
+      </div>
+
       <div class="certificates-grid">
 
         <!-- Cert 1 -->
-        <a href="https://coursera.org/verify/specialization/C6XDUG44TG4H" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://coursera.org/verify/specialization/C6XDUG44TG4H" target="_blank" class="glass-card cert-card reveal-element" data-category="programming" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -686,7 +701,7 @@
         </a>
 
         <!-- Cert 2 -->
-        <a href="https://coursera.org/verify/professional-cert/R0AG5K59EW9K" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://coursera.org/verify/professional-cert/R0AG5K59EW9K" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -704,7 +719,7 @@
         </a>
 
         <!-- Cert 3 -->
-        <a href="https://drive.google.com/file/d/1Pj_DquIJHLqq8m-SdCSVoxyx1KwvUjiw/view?usp=drive_link" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://drive.google.com/file/d/1Pj_DquIJHLqq8m-SdCSVoxyx1KwvUjiw/view?usp=drive_link" target="_blank" class="glass-card cert-card reveal-element" data-category="competition" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/techsoft_logo.jpg" alt="Techsoft Logo">
           </div>
@@ -722,7 +737,7 @@
         </a>
 
         <!-- Cert 4 -->
-        <a href="https://drive.google.com/file/d/1VouEnEksAAI6ciU7MAzbiOkFqCGlOx0L/view?usp=drive_link" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://drive.google.com/file/d/1VouEnEksAAI6ciU7MAzbiOkFqCGlOx0L/view?usp=drive_link" target="_blank" class="glass-card cert-card reveal-element" data-category="business" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/myskill_logo.png" alt="MySkill Logo">
           </div>
@@ -740,7 +755,7 @@
         </a>
 
         <!-- Cert 5 -->
-        <a href="https://drive.google.com/file/d/1-V4dVytbvzTuD-Eic2tmN-8V22y4eOfg/view?usp=drive_link" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://drive.google.com/file/d/1-V4dVytbvzTuD-Eic2tmN-8V22y4eOfg/view?usp=drive_link" target="_blank" class="glass-card cert-card reveal-element" data-category="business" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/myskill_logo.png" alt="MySkill Logo">
           </div>
@@ -758,7 +773,7 @@
         </a>
 
         <!-- Cert 6 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/42KNQY4BFVVF" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/42KNQY4BFVVF" target="_blank" class="glass-card cert-card reveal-element" data-category="programming" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -775,7 +790,7 @@
         </a>
 
         <!-- Cert 7 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/LSO8YDJ23N0M" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/LSO8YDJ23N0M" target="_blank" class="glass-card cert-card reveal-element" data-category="programming" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -792,7 +807,7 @@
         </a>
 
         <!-- Cert 8 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/RUDVW8JJYJ2P" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/RUDVW8JJYJ2P" target="_blank" class="glass-card cert-card reveal-element" data-category="programming" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -809,7 +824,7 @@
         </a>
 
         <!-- Cert 9 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/4C6IWROSZC2X" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/4C6IWROSZC2X" target="_blank" class="glass-card cert-card reveal-element" data-category="programming" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -826,7 +841,7 @@
         </a>
 
         <!-- Cert 10 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/Q4J6EXUXQ62S" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/Q4J6EXUXQ62S" target="_blank" class="glass-card cert-card reveal-element" data-category="programming" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -843,7 +858,7 @@
         </a>
 
         <!-- Cert 11 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/1VW1ACIK17TG" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/1VW1ACIK17TG" target="_blank" class="glass-card cert-card reveal-element" data-category="programming" style="display: none;">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -860,7 +875,7 @@
         </a>
 
         <!-- Cert 12 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/MI9LVP3JKQ3M" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/MI9LVP3JKQ3M" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -877,7 +892,7 @@
         </a>
 
         <!-- Cert 13 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/7NO4TEAKTIB4" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/7NO4TEAKTIB4" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -894,7 +909,7 @@
         </a>
 
         <!-- Cert 14 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/D3CPT0AB5YP6" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/D3CPT0AB5YP6" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -911,7 +926,7 @@
         </a>
 
         <!-- Cert 15 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/71G6D03M2C61" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/71G6D03M2C61" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -928,7 +943,7 @@
         </a>
 
         <!-- Cert 16 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/PX4QVSKV0VTK" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/PX4QVSKV0VTK" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -945,7 +960,7 @@
         </a>
 
         <!-- Cert 17 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/VX5ASDVV8V2S" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/VX5ASDVV8V2S" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>
@@ -962,7 +977,7 @@
         </a>
 
         <!-- Cert 18 -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/74ZPCCWTXQZO" target="_blank" class="glass-card cert-card reveal-element">
+        <a href="https://www.coursera.org/account/accomplishments/verify/74ZPCCWTXQZO" target="_blank" class="glass-card cert-card reveal-element" data-category="ai">
           <div class="cert-logo-box">
             <img src="assets/google_logo.svg" alt="Google Logo">
           </div>

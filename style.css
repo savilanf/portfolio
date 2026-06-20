@@ -1707,6 +1707,22 @@ section {
    CERTIFICATES & LICENSES SECTION
    ========================================================================== */
 
+.cert-category-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+}
+
+.cert-category-title i {
+  width: 20px;
+  height: 20px;
+}
+
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -2037,6 +2053,83 @@ section {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* Segmented Experience */
+.experience-segments {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exp-segment {
+  display: flex;
+  flex-direction: column;
+}
+
+.segment-title-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+}
+
+.segment-title-text i {
+  width: 18px;
+  height: 18px;
+}
+
+.segment-timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--timeline-line);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.segment-timeline .timeline-item-card {
+  position: relative;
+  padding: 20px;
+}
+
+/* Dots on the segment timeline */
+.segment-timeline .timeline-item-card::before {
+  content: '';
+  position: absolute;
+  left: -28px; /* Perfectly aligns dot on the border-left line */
+  width: 14px;
+  height: 14px;
+  background-color: var(--bg-primary);
+  border: 3px solid var(--accent-color);
+  top: 25px;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 8px var(--accent-glow);
+  transition: all var(--transition-normal);
+}
+
+[data-theme="light"] .segment-timeline .timeline-item-card::before {
+  background-color: var(--bg-primary);
+}
+
+.segment-timeline .timeline-item-card:hover::before {
+  background-color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+  .experience-segments {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 600px;
+  }
 }
 
 /* ==========================================================================
