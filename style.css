@@ -1969,7 +1969,7 @@ section {
   padding: 10px 40px;
   position: relative;
   width: 50%;
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 }
 
 /* Dots on the timeline */
@@ -2008,7 +2008,7 @@ section {
 }
 
 .timeline-item-card {
-  padding: 30px;
+  padding: 20px;
 }
 
 .timeline-date {
@@ -2030,7 +2030,7 @@ section {
   font-size: 0.95rem;
   color: var(--text-muted);
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .timeline-item-card p {
